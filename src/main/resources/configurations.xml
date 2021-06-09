@@ -6,4 +6,8 @@
         <user>root</user>
         <pwd>root</pwd>
     </database>
+    <admin>
+        <nom>NOM</nom>
+        <prenom>Prenom</prenom>
+    </admin>
 </configuration>

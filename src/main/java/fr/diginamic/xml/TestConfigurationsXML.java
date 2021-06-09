@@ -10,23 +10,30 @@ import java.util.Iterator;
 public class TestConfigurationsXML {
     public static void main(String[] args) throws ConfigurationException {
 
-        Configurations configs = new Configurations();
-        try {
-            XMLConfiguration config = configs.xml("configurations.xml");
-            String nomBase = config.getString("database[@nom]");
-            System.out.println(nomBase);
-            String hostDatabase = config.getString("database.host");
-        } catch (ConfigurationException e) {
-            System.err.println("Le fichier est introuvable");
-        }
+        Configurations configurations = new Configurations();
 
-        PropertiesConfiguration config = configs.properties("configurations.xml");
-        Iterator<String> it = config.getKeys();
-        while (it.hasNext()) {
-            String cle = it.next();
-            String valeur = config.getString("key");
+        //définir les deux types de configurations
+        XMLConfiguration configXML = configurations.xml("configurations.xml");
+        PropertiesConfiguration configprops = configurations.properties("configurations.properties");
+
+        //Boucle de parcours de la conf properties
+        Iterator<String> itkeys = configprops.getKeys();
+        while (itkeys.hasNext()) {
+            String cle = itkeys.next();
+            String valeur = configprops.getString("key");
 
             System.out.println(cle + ":" + valeur);
         }
+
+
+        //Boucle de parcours de la conf XML
+        itkeys = configXML.getKeys();
+        while (itkeys.hasNext()) {
+            String cle = itkeys.next();
+            String valeur = configprops.getString("key");
+
+            System.out.println(cle + ":" + valeur);
+        }
+
     }
 }
