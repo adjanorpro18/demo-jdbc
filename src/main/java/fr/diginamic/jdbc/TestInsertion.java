@@ -15,13 +15,13 @@ public class TestInsertion {
 
     public static void main(String[] args) {
 
-       /* FournisseurDaoJdbc fournisseurDaoJdbc = new FournisseurDaoJdbc();
+        FournisseurDaoJdbc fournisseurDaoJdbc = new FournisseurDaoJdbc();
         Fournisseur f1 = new Fournisseur(4, "La maison de la Peinture");
         fournisseurDaoJdbc.insert(f1);
 
         // Insertion du nom d'un forunissseur avec les simples quotes
         Fournisseur f2 = new Fournisseur(0,"L'Espace Creation");
-        fournisseurDaoJdbc.insert(f2);*/
+        fournisseurDaoJdbc.insert(f2);
 
         FournisseurDaoJdbc2 fournisseurDaoJdbc2 = new FournisseurDaoJdbc2();
         Fournisseur f3 = new Fournisseur(5, "France Materiaux");
