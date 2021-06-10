@@ -1,5 +1,9 @@
 package fr.diginamic.entites;
 
+/**
+ * @author Enyon ADJANOR
+ * @param id,nom
+ */
 public class Fournisseur {
     private int id;
     private String nom;
@@ -32,5 +36,15 @@ public class Fournisseur {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+    /**
+     * Methode toString
+     */
+    @Override
+    public String toString() {
+        return "Fournisseur{" +
+                "id=" + id + " : " +
+                ", nom='" + nom + '\'' +
+                '}';
     }
 }
