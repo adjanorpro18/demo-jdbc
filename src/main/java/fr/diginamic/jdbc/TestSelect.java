@@ -1,20 +1,15 @@
 package fr.diginamic.jdbc;
 
-import fr.diginamic.entites.Fournisseur;
-import fr.diginamic.jdbc.dao.FournisseurDao;
-import fr.diginamic.jdbc.dao.FournisseurDaoJdbc;
-import org.mariadb.jdbc.Driver;
-
-import java.sql.*;
-import java.util.ArrayList;
+import fr.diginamic.jdbc.dao.FournisseurDaoJdbc2;
 
 public class TestSelect {
     public static void main(String[] args) {
 
-        FournisseurDaoJdbc fournisseurDaoJdbc = new FournisseurDaoJdbc();
+        //FournisseurDaoJdbc fournisseurDaoJdbc = new FournisseurDaoJdbc();
+        //fournisseurDaoJdbc.extraire();
 
-        fournisseurDaoJdbc.extraire();
-
+        FournisseurDaoJdbc2 fournisseurDaoJdbc2 = new FournisseurDaoJdbc2();
+        fournisseurDaoJdbc2.extraire();
 
     }
 }
